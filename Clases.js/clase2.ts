@@ -33,10 +33,12 @@ function toUpperCase(str: string): string { return str.toUpperCase(); }
 
 function sumArray(arr: number[]): number { return arr.reduce((acc, curr) => acc + curr, 0); }
 
+
+
 // 5. Define una función que tome un arreglo de objetos de tipo Person y devuelva un nuevo
 // 
-
-// function getNames(people: person[]): string[] { return people.map((person) => person.name); }
+type NewType = "person";
+function getNames({ people }: { people: NewType[]; }): string[] { return people.map((person) => person); }
 
 // 6. Define una función que tome dos parámetros: un arreglo de números y un número de 
 // referencia. La función debe devolver un nuevo arreglo que contenga solo los números del 
